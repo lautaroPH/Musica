@@ -1,0 +1,203 @@
+body {
+    color: #333;
+    font-family: sans-serif;
+    background: #e0e5ec;
+    margin: 0;
+}
+.container-responsive {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    flex-basis: 60px;
+    background-image: url(musica-header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    height: 300px;
+    z-index: -1;
+    text-align: center;
+}
+
+.header::before{
+    content: "";
+    width: 100%;
+    height: 388px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #ADA996, #F2F2F2, #DBDBDB, ##EAEAEA);
+    opacity: .3;
+    z-index: -1;
+}
+
+.article {
+    flex-basis: 500px;
+    flex-grow: 2;
+    flex-shrink: 0;
+}
+
+.footer{
+    flex-grow: 1;
+    background:  #eaecf0;
+}
+
+.redes{ 
+    height: 2vh;
+    margin-top: -5px;
+    color: #222;
+    text-align: center;
+}
+
+.footer__div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.footer__div i {
+    font-size: 30px;   
+    padding: 10px 10px 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #aaa;
+}
+.facebook:hover {
+    color: #07f;
+    background: rgba(0,0,0,.1);
+}
+.twitter:hover {
+    color: #07f;
+    background: rgba(0,0,0,.1);
+}
+.instagram:hover {
+    color:#e1306c;
+    background: rgba(0,0,0,.1);
+}
+.github:hover {
+    color: #000;
+    background: rgba(0,0,0,.1);
+}
+.header-container{
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+}
+
+.titulo{
+    color: #eee;
+    font-size: 100px;
+    margin-bottom: 0;
+}
+
+.span-titulo{
+    color: #63f;
+}
+
+.subtitulo{
+    font-size: 37px;
+    color: #eee;
+    margin-top: 0;
+}
+
+
+
+@media screen and (max-width: 1322px) {
+    .titulo{
+        margin-top: -20px;
+    }
+
+    .header::before{
+        height: 420px;
+    }
+}
+
+
+.player__audio {
+    visibility: hidden;
+}
+
+
+.titulo-h2{
+    margin: 10px;
+    text-align: center;
+    font-size: 45px;
+    color: #222;
+    font-family: 'Titillium Web', sans-serif;
+ }
+
+ 
+#boton2 {
+   background: #ffecf0;
+   color: #000;
+   font-size: 20px;
+   
+   
+}
+
+.generos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    margin: 80px 230px;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    grid-gap: 30px;
+}
+
+.genero {
+    background: #e0e5ec;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.genero:hover{
+    box-shadow: 5px 5px 20px  rgba(0, 0, 0, .4);
+    transform: translateY(-3%);
+}
+
+.rock {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+.titulos-generos {
+    color: #000;
+    font-size: 35px;
+    margin: auto;
+    margin-top: -60px;
+    text-align: center;
+}
+
+@media screen and (max-width: 745px) {
+    .header{
+        background-position: center;
+    }
+    .titulo{
+        font-size: 60px;
+    }
+
+    .subtitulo{
+        font-size: 30px;
+    }
+    .generos-container {
+        margin: auto;
+    }
+}
+@media screen and (max-width: 370px){
+    .generos-container {
+        margin-left: -30px;
+    }
+    .rock {
+        width: 100%;
+        height: 200px;
+    }
+}
