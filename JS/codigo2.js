@@ -16,7 +16,11 @@ const playPause6 = document.getElementById("folk");
 const playPause7 = document.getElementById("clasica");
 const playPause8 = document.getElementById("punk");
 const playPause9 = document.getElementById("ambiental");
+const boton = document.getElementById("boton");
 
+boton.addEventListener("click", ()=> {
+    boton.style.display = "none";
+})
 
 const play = (reproducir,musica)=> {
     reproducir.addEventListener("mouseover", () =>{
